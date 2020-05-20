@@ -1,0 +1,16 @@
+
+/config.sh
+/credentials.sh
+/data
+
+/terraform/tf.tfvars
+/terraform/.terraform/
+
+*.swp
+*.swo
+*.old
+*~
+*.cache
+*.config
+*.pid
+*.stop
