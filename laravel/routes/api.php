@@ -17,3 +17,16 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+Route::get('v1/task', 'TaskController@index')->name('task.index');
+Route::get('v1/task/{task}', 'TaskController@show')->name('task.show');
+Route::put('v1/task', 'TaskController@store')->name('task.store');
+Route::patch('v1/task/{task}', 'TaskController@update')->name('task.update');
+Route::delete('v1/task/{task}', 'TaskController@destroy')->name('task.destroy');
+
+Route::get('v1/todo', 'TodoController@index')->name('todo.index');
+Route::get('v1/todo/{todo}', 'TodoController@show')->name('todo.show');
+Route::put('v1/todo', 'TodoController@store')->name('todo.store');
+Route::patch('v1/todo/{todo}', 'TodoController@update')->name('todo.update');
+Route::delete('v1/todo/{todo}', 'TodoController@destroy')->name('todo.destroy');
+
