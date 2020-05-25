@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Box from '@material-ui/core/Box';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -14,16 +13,13 @@ import {
 } from '@material-ui/pickers';
 
 const todoUrl = '/todo/';
-
 const putTaskUrl = '/api/v1/task';
-
 const verb = [ 'Wash', 'Clean', 'Comb', 'Wax', 'Stuff', 'Polish' ];
 const subject = [ 'Laundry', 'Dog', 'Windows', 'Car', 'Stuff', 'Silverware' ];
 
 const Task = (props) => {
 
   const { todoId, loadData } = props;
-
   const makeSuggest = () => {
     return (
       verb[Math.floor(Math.random() * verb.length)] + ' the ' +
@@ -68,8 +64,8 @@ const Task = (props) => {
   const name = React.createRef();
 
   return (
-    <Box style={{marginTop: '20px'}}>
-      <Card>
+    <form noValidate autoComplete="off">
+      <Card style={{marginTop: '20px'}}>
         <CardContent>
           <h1>Add Item to list</h1>
 
@@ -106,11 +102,9 @@ const Task = (props) => {
           </MuiPickersUtilsProvider>
 
           <Button variant="contained" onClick={handleCreateClick}>Create</Button>
-
         </CardContent>
-
       </Card>
-    </Box>
+    </form>
   )
 }
 

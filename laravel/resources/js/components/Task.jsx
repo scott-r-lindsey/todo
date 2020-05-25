@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Box from '@material-ui/core/Box';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -11,6 +10,8 @@ import DeleteIcon from '@material-ui/icons/Delete';
 import CheckIcon from '@material-ui/icons/Check';
 import CheckBoxIcon from '@material-ui/icons/CheckBox';
 import CheckBoxOutlineBlankIcon from '@material-ui/icons/CheckBoxOutlineBlank';
+
+import { format } from '@date-io/date-fns';
 
 const fetch = require('node-fetch');
 const taskUrl = '/api/v1/task/';
@@ -34,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
       marginLeft: '10px',
       verticalAlign: 'middle',
       fontSize: '20px',
-    }
+    },
   },
 }));
 
@@ -68,17 +69,15 @@ const Task = (props) => {
   }
 
   const handleDeleteClick = () => {
-    if (task.name && task.description){
-      (async () => {
-        fetch(`${taskUrl}${task.id}`, {
-          method: 'DELETE',
-          headers: { 'Content-type': 'application/json; charset=UTF-8' },
-        })
-        .then(parsed => {
-          loadData();
-        })
-      })();
-    }
+    (async () => {
+      fetch(`${taskUrl}${task.id}`, {
+        method: 'DELETE',
+        headers: { 'Content-type': 'application/json; charset=UTF-8' },
+      })
+      .then(parsed => {
+        loadData();
+      })
+    })();
   }
 
   return (
@@ -116,7 +115,6 @@ const Task = (props) => {
         </Button>
        }
     </Card>
-    
   );
 }
 

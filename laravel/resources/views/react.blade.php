@@ -7,19 +7,28 @@
         <title>Laravel</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" />
 
         <!-- Styles -->
         <style>
             html, body {
                 background-color: #aac;
                 color: black;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                margin: 10%;
+                font-family: 'Roboto', sans-serif;
+                font-weight: 400;
+                margin: 20px 10% 0 10%;
             }
             .MuiTextField-root{
                 margin:10px;
+            }
+            a{
+                font-weight:bold;
+                text-decoration:none;
+                color:#204A87;
+            }
+            a:hover{
+                color:#0B264E;
+
             }
 
         </style>

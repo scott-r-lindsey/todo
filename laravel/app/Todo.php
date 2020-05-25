@@ -17,4 +17,11 @@ class Todo extends Model
     {
         return $this->hasMany('App\Task')->without('todo');
     }
+
+    public function delete()
+    {
+        $this->tasks()->delete();
+        return parent::delete();
+    }
+
 }

@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import Box from '@material-ui/core/Box';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
@@ -55,39 +54,35 @@ const Todo = (props) => {
       {data ? (
         <>
           <form className={classes.root} noValidate autoComplete="off">
-            <Box>
-              <Card>
-                <CardContent>
-                  <h1>{ data.name }</h1>
-                  <strong>{ data.description }</strong><br />
-                  <em>Contains { data.tasks.length } item(s)</em>
+            <Card>
+              <CardContent>
+                <h1>{ data.name }</h1>
+                <strong>{ data.description }</strong><br />
+                <em>Contains { data.tasks.length } item(s)</em>
 
-                  <div style={{padding: '10px 0'}}>
-                    {
-                      data.tasks.map(task => {
-                        return (
-                          <Task 
-                            key={task.id} 
-                            task={task} 
-                            loadData={loadData}
-                          />
-                        );
-                      })
-                    }
-                  </div>
+                <div style={{padding: '10px 0'}}>
+                  {
+                    data.tasks.map(task => {
+                      return (
+                        <Task 
+                          key={task.id} 
+                          task={task} 
+                          loadData={loadData}
+                        />
+                      );
+                    })
+                  }
+                </div>
 
+                <br/>
+                <br/>
 
-                  <br/>
-                  <br/>
-
-                </CardContent>
-
-              </Card>
-            </Box>
-
-            <NewTask todoId={data.id} loadData={loadData} foo="foo" />
-
+              </CardContent>
+            </Card>
          </form>
+
+         <NewTask todoId={data.id} loadData={loadData} />
+
         </>
       ) : (
         <div>loading...</div>
