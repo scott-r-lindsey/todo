@@ -25,3 +25,8 @@ This will install dependecies for Laravel and React.
 
 The application will appear on http://localhost:8081/
 
+# TODO
+- PHP is dockerized, node is not.  I should really choose one strategy
+- testing
+- linting
+
