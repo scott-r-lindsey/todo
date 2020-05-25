@@ -4,10 +4,11 @@ Simple test app with Laravel 7
 This is just Scott learning Laravel, with React as a front end.
 
 # Requirements
- - Docker
+ - docker
+ - docker-compose
  - PHP (Any recent PHP version)
- - Composer
- - Yarn
+ - composer
+ - yarn
 
 # Installation
 
