@@ -70,6 +70,7 @@ const Task = (props) => {
           <h1>Add Item to list</h1>
 
           <TextField
+            style={{width: '90%'}}
             id="todo-name"
             label="Name"
             variant="outlined"
@@ -78,6 +79,7 @@ const Task = (props) => {
           />
 
           <TextField
+            style={{width: '90%', marginTop: '20px'}}
             id="todo-description"
             label="description"
             multiline
@@ -89,6 +91,7 @@ const Task = (props) => {
 
           <MuiPickersUtilsProvider utils={DateFnsUtils}>
             <KeyboardDatePicker
+              style={{width: '90%', marginTop: '20px'}}
               disableToolbar
               variant="outline"
               margin="normal"

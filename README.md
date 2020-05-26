@@ -24,7 +24,7 @@ This will install dependecies for Laravel and React.
 ./scripts/start.sh
 ```
 
-In addition, you will have to run ```php artisan migrate``` (in the laravel folder) to setup the database.
+In addition, you will have to run ```./scripts/migrate.sh``` to setup the database.
 
 The application will appear on http://localhost:8081/
 

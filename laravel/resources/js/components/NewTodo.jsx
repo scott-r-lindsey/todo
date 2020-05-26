@@ -19,7 +19,6 @@ const useStyles = makeStyles((theme) => ({
     },
     '& .MuiButtonBase-root': {
       margin: theme.spacing(1),
-      float: 'right',
     }
   },
 }));
@@ -78,6 +77,7 @@ const NewTodo = (props) => {
           <h1>New Todo List</h1>
 
           <TextField
+            style={{width: '90%'}}
             id="todo-name"
             label="Name"
             variant="outlined"
@@ -85,6 +85,7 @@ const NewTodo = (props) => {
             defaultValue={suggest}
           /><br />
           <TextField
+            style={{width: '90%', marginTop: '20px'}}
             id="todo-description"
             label="description"
             multiline
