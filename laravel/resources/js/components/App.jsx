@@ -41,6 +41,8 @@ function App() {
               <strong style={{margin: '0 10px'}}>|</strong>
               <Link to="/todo/new">New List</Link>
               <strong style={{margin: '0 10px'}}>|</strong>
+              <a href="https://github.com/scott-r-lindsey/todo">Github</a>
+              <strong style={{margin: '0 10px'}}>|</strong>
               <a href="https://resume.scott.to/">Scott Lindsey</a>
             </CardContent>
           </Card>
