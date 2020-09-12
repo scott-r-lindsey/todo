@@ -32,7 +32,7 @@
         "@material-ui/pickers": "^3.2.10",
         "date-fns": "^2.14.0",
         "moment": "^2.26.0",
-        "node-fetch": "^2.6.0",
+        "node-fetch": "^2.6.1",
         "react-router": "^5.2.0",
         "react-router-dom": "^5.2.0"
     }
